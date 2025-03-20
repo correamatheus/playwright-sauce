@@ -10,7 +10,7 @@ export class Login {
     }
 
     async visit() {
-        await this.page.goto('https://www.saucedemo.com/')
+        await this.page.goto('/')
 
         const loginForm = this.page.locator('.login-box')
         await expect(loginForm).toBeVisible()
