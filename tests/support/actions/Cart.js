@@ -28,4 +28,12 @@ export class Cart {
         await expect(cartIcon).toHaveText('');
     }
 
+    async addToCart() {
+        const removeCartButton = this.page.locator('[data-test="remove-sauce-labs-backpack"]')
+        const shoppingCartBadge = this.page.locator('[data-test="shopping-cart-link"]')
+        await this.page.locator('[data-test="add-to-cart-sauce-labs-backpack"]').click()
+        await expect(removeCartButton).toBeVisible();
+        await expect(shoppingCartBadge).toHaveText('1');
+    }
+
 }
