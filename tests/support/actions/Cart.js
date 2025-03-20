@@ -22,7 +22,10 @@ export class Cart {
     }
 
     async removeProduct() {
-        
+        const cartIcon = this.page.locator('[data-test="shopping-cart-link"]');
+        this.page.locator('[data-test="remove-sauce-labs-backpack"]').click()
+        await expect(cartIcon).toBeVisible();
+        await expect(cartIcon).toHaveText('');
     }
 
 }
