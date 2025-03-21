@@ -41,3 +41,10 @@ test('não deve logar quando nenhum campo é preenchido - [TC-06]', async ({ pag
     const message = 'Epic sadface: Username is required'    
     await page.errorMessage.haveText(message)
 })
+
+test('não deve logar quando usuário está bloqueado - [TC-17]', async ({ page }) => {
+    await page.login.visit()
+    await page.login.submit('locked_out_user', 'secret_sauce')
+    const message = 'Epic sadface: Sorry, this user has been locked out.'    
+    await page.errorMessage.haveText(message)
+})
