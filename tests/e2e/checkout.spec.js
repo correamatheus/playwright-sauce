@@ -1,6 +1,6 @@
 const { test, expect } = require('../support')
 
-test('não continuar compra quando nenhum campo é preenchido', async ({ page }) => {
+test('não continuar compra quando nenhum campo é preenchido - [TC-10]', async ({ page }) => {
     const message = 'Error: First Name is required'    
 
     await page.login.do('standard_user', 'secret_sauce')
@@ -12,7 +12,7 @@ test('não continuar compra quando nenhum campo é preenchido', async ({ page })
     await page.errorMessage.haveText(message)
 })
 
-test('não continuar compra quando apenas first name não é preenchido', async ({ page }) => {
+test('não continuar compra quando apenas first name não é preenchido - [TC-11]', async ({ page }) => {
     const message = 'Error: First Name is required'    
 
     await page.login.do('standard_user', 'secret_sauce')   
@@ -23,7 +23,7 @@ test('não continuar compra quando apenas first name não é preenchido', async 
     await page.errorMessage.haveText(message)
 })
 
-test('não continuar compra quando apenas last name não é preenchido', async ({ page }) => {
+test('não continuar compra quando apenas last name não é preenchido - [TC-12]', async ({ page }) => {
     const message = 'Error: Last Name is required'    
 
     await page.login.do('standard_user', 'secret_sauce')   
@@ -34,7 +34,7 @@ test('não continuar compra quando apenas last name não é preenchido', async (
     await page.errorMessage.haveText(message)
 })
 
-test('não continuar compra quando apenas zip code não é preenchido', async ({ page }) => {
+test('não continuar compra quando apenas zip code não é preenchido - [TC-13]', async ({ page }) => {
     const message = 'Error: Postal Code is required'
 
     await page.login.do('standard_user', 'secret_sauce')   
@@ -46,7 +46,7 @@ test('não continuar compra quando apenas zip code não é preenchido', async ({
     
 })
 
-test('deve exibir informações de pagamento, transporte e taxas', async ({ page }) => {
+test('deve exibir informações de pagamento, transporte e taxas - [TC-14]', async ({ page }) => {
 
     await page.login.do('standard_user', 'secret_sauce')   
     await page.cart.addToCart()
@@ -60,7 +60,7 @@ test('deve exibir informações de pagamento, transporte e taxas', async ({ page
 })
 
 
-test('deve finalizar compra com sucesso', async ({ page }) => {
+test('deve finalizar compra com sucesso - [TC-15]', async ({ page }) => {
 
     await page.login.do('standard_user', 'secret_sauce')   
     await page.cart.addToCart()

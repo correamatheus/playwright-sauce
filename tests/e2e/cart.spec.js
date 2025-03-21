@@ -1,11 +1,11 @@
 const { test, expect } = require('../support')
 
-test('deve poder adicionar produto ao carrinho', async ({ page }) => {
+test('deve poder adicionar produto ao carrinho - [TC-07]', async ({ page }) => {
     await page.login.do('standard_user', 'secret_sauce')
     await page.cart.addToCart()
 })
 
-test('deve exibir produto adicionado ao carrinho', async ({ page }) => {
+test('deve exibir produto adicionado ao carrinho - [TC-08]', async ({ page }) => {
     await page.login.do('standard_user', 'secret_sauce')
     await page.cart.addToCart()
     await page.cart.goToCart()
@@ -13,7 +13,7 @@ test('deve exibir produto adicionado ao carrinho', async ({ page }) => {
     await page.cart.checkProductInCart()
 })
 
-test('deve remover produto do carrinho em cart.html', async ({ page }) => {
+test('deve remover produto do carrinho em cart.html - [TC-09]', async ({ page }) => {
     await page.login.do('standard_user', 'secret_sauce')
     await page.cart.addToCart()
     await page.cart.goToCart()
