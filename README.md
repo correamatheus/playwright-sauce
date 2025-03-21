@@ -20,7 +20,7 @@ Siga os passos abaixo para rodar os testes em sua máquina:
 1. **Clone o repositório**:
    ```bash
    git clone https://github.com/correamatheus/playwright-sauce.git
-   cd seu-repositorio
+   cd playwright-sauce
 2. **Instale as dependências:**:
    ```bash
     npm install
