@@ -19,7 +19,7 @@ Siga os passos abaixo para rodar os testes em sua máquina:
 
 1. **Clone o repositório**:
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
+   git clone https://github.com/correamatheus/playwright-sauce.git
    cd seu-repositorio
 2. **Instale as dependências:**:
    ```bash
